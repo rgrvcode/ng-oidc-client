@@ -51,7 +51,7 @@ export function getWebStorageStateStore() {
 
 export const oidcConfigSettings: Config = {
   oidc_config: {
-    authority: 'https:/ng-oidc-client-server.azurewebsites.net',
+    authority: 'http://localhost:8180/auth/realms/demo',
     client_id: 'ng-oidc-client-identity',
     redirect_uri: 'http://localhost:4200/callback.html',
     response_type: 'code',
@@ -102,7 +102,7 @@ export const oidcConfigSettings: Config = {
     NgOidcClientModule.forRoot(oidcConfigSettings),
     UserModule.forRoot({
       urls: {
-        api: 'https://localhost:5001'
+        api: 'http://localhost:8180/auth/realms/demo/protocol/openid-connect'
       }
     }),
     MaterialModule

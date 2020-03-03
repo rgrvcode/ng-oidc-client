@@ -9,6 +9,6 @@ export class UserService {
   constructor(private http: HttpClient, @Inject(USER_CONFIG) private config: Config) {}
 
   getMe(): Observable<User> {
-    return this.http.get<User>(`${this.config.urls.api}/connect/userinfo`);
+    return this.http.get<User>(`${this.config.urls.api}/userinfo`);
   }
 }
